@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Precision Works Details — mobile car detailing in Northern Indiana." />
+  <title>Precision Works Details | Mobile Car Detailing</title>
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="header" id="top">
+  <nav class="nav container">
+    <a class="brand" href="#top">
+      <span class="brand-name">Precision Works Details</span>
+      <span class="brand-sub">Goshen, IN • Mobile Car Detailing</span>
+    </a>
+
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span class="bars"></span>
+    </button>
+
+    <div class="nav-links" data-navlinks>
+      <a href="#services">Services</a>
+      <a href="#pricing">Pricing</a>
+      <a class="btn btn-primary nav-cta" href="#contact">Request a Quote</a>
+    </div>
+  </nav>
+</header>
+
+<a class="float-btn" href="#contact">Request a Quote</a>
+
+<main>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="service-area">
+        <span class="spark"></span>
+        <span><strong>Local only:</strong> Goshen / Elkhart / Mishawaka + nearby</span>
+      </div>
+
+      <h1 class="h1">Clean, modern detailing—at your place.</h1>
+      <p class="sub">Pick a package. Choose vehicle size. Request a quote.</p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#contact">Request a Quote</a>
+        <a class="btn btn-ghost" href="#pricing">View Pricing</a>
+      </div>
+    </div>
+
+    <aside class="card hero-card">
+      <div>
+        <div class="kicker">Text / Call</div>
+        <a class="big-link" href="tel:+15746063604">(574) 606-3604</a>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section id="services" class="section">
+  <div class="container">
+    <h2 class="h2">Services</h2>
+
+    <div class="grid-3">
+      <div class="card service">
+        <h3 class="h3">Interior</h3>
+        <ul class="list">
+          <li>Vacuum</li>
+          <li>Wipe down</li>
+          <li>Windows</li>
+        </ul>
+      </div>
+
+      <div class="card service">
+        <h3 class="h3">Exterior</h3>
+        <ul class="list">
+          <li>Hand wash</li>
+          <li>Wheels</li>
+          <li>Bug removal</li>
+        </ul>
+      </div>
+
+      <div class="card service">
+        <h3 class="h3">Full Detail</h3>
+        <ul class="list">
+          <li>Interior + Exterior</li>
+          <li>Best overall</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" class="section section-alt">
+  <div class="container">
+    <h2 class="h2">Pricing</h2>
+
+    <div class="card pricing-top">
+      <div>
+        <div class="label">Vehicle Size</div>
+        <div class="segmented">
+          <button type="button" class="seg is-active" data-size="small">Small</button>
+          <button type="button" class="seg" data-size="medium">Medium</button>
+          <button type="button" class="seg" data-size="large">Large</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-3" id="pricingGrid"></div>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <div class="container contact-grid">
+
+    <div>
+      <h2 class="h2">Request a Quote</h2>
+      <p class="muted">We’ll respond ASAP.</p>
+    </div>
+
+    <div class="card form">
+
+      <!-- FORM CONNECTED TO FORMSPREE -->
+      <form id="contactForm"
+            action="https://formspree.io/f/xojnpprq"
+            method="POST"
+            novalidate>
+
+        <!-- Honeypot spam trap -->
+        <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" />
+
+        <input type="hidden" name="_subject" value="New Quote Request — Precision Works Details" />
+
+        <div class="row-2">
+          <div class="field">
+            <label>Name</label>
+            <input name="name" type="text" required>
+          </div>
+
+          <div class="field">
+            <label>Phone</label>
+            <input name="phone" type="tel" required>
+          </div>
+        </div>
+
+        <div class="row-2">
+          <div class="field">
+            <label>Service</label>
+            <select name="service" required>
+              <option value="">Select</option>
+              <option>Interior</option>
+              <option>Exterior</option>
+              <option>Full Detail</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label>Vehicle Size</label>
+            <select name="size" required>
+              <option value="">Select</option>
+              <option>Small</option>
+              <option>Medium</option>
+              <option>Large</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Vehicle</label>
+          <input name="vehicle" type="text" required>
+        </div>
+
+        <div class="field">
+          <label>Message</label>
+          <textarea name="message" rows="4" required></textarea>
+        </div>
+
+        <button class="btn btn-primary btn-block" type="submit">
+          Send Quote
+        </button>
+
+        <p class="muted" id="formNote"></p>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <strong>Precision Works Details</strong>
+      <div class="muted small">Mobile Car Detailing • Northern Indiana</div>
+    </div>
+
+    <div class="muted small">
+      © <span id="year"></span> Precision Works Details
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
